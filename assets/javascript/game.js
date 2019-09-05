@@ -27,7 +27,7 @@ document.onkeyup = function(event) {
 
     userGuess = userGuessInput.toLowerCase();
     console.log("User guess is " + userGuess);
-        
+    
     // Check if the letters match.
     if (letters.includes(userGuess)) {
 
@@ -37,7 +37,7 @@ document.onkeyup = function(event) {
             guessedLetters = []; 
         } else {
             guessesLeft--;
-            guessedLetters.push(userGuess);
+            guessedLetters.push(" " + userGuess);
         };
         if (guessesLeft === 0) {
             guessesLeft = 9;
@@ -55,4 +55,5 @@ document.onkeyup = function(event) {
     winsText.textContent = "Wins: " + wins;
     lossesText.textContent = "Losses: " + losses;
     guessesLeftText.textContent = "Guesses left: " + guessesLeft;
+    lettersGuessedText.textContent = "Your guesses so far: " + guessedLetters;
 }
