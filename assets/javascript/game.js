@@ -22,11 +22,9 @@ document.onkeyup = function(event) {
     // Computer chooses a letter.
     if (guessesLeft === 9) {
         mysteryLetter = letters[Math.floor(Math.random() * letters.length)];
-        console.log(mysteryLetter);
         }
 
     userGuess = userGuessInput.toLowerCase();
-    console.log("User guess is " + userGuess);
     
     // Check if the letters match.
     if (letters.includes(userGuess)) {
@@ -46,10 +44,10 @@ document.onkeyup = function(event) {
         }
     }
 
-    console.log("comp choice: "+ mysteryLetter);
-    console.log("Number of wins: " + wins);
-    console.log("Number of guesses: " + guessesLeft);
-    console.log("Number of losses " + losses);
+    // console.log("comp choice: "+ mysteryLetter);
+    // console.log("Number of wins: " + wins);
+    // console.log("Number of guesses: " + guessesLeft);
+    // console.log("Number of losses " + losses);
 
     // Putting the latest results of the game on the page.
     winsText.textContent = "Wins: " + wins;
