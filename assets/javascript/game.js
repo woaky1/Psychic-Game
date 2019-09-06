@@ -24,7 +24,7 @@ document.onkeyup = function(event) {
         mysteryLetter = letters[Math.floor(Math.random() * letters.length)];
         }
 
-    userGuess = userGuessInput.toLowerCase();
+    var userGuess = userGuessInput.toLowerCase();
     
     // Check if the letters match.
     if (letters.includes(userGuess)) {
