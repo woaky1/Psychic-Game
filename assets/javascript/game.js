@@ -18,13 +18,14 @@ var lettersGuessedText = document.getElementById("letters-guessed-text");
 document.onkeyup = function(event) {
     // We record the users choice as a variable.
     var userGuessInput = event.key;
+    // Let's force the guess to be lowercase to match the letters in our earlier array.
+    var userGuess = userGuessInput.toLowerCase();
+    // console.log(userGuess);
 
     // Computer chooses a letter.
     if (guessesLeft === 9) {
         mysteryLetter = letters[Math.floor(Math.random() * letters.length)];
         }
-
-    var userGuess = userGuessInput.toLowerCase();
     
     // Check if the letters match.
     if (letters.includes(userGuess)) {
